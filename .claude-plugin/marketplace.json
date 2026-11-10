@@ -1,0 +1,15 @@
+{
+  "name": "niwa-app",
+  "description": "Niwa's plugin for Claude: publish what you make with AI",
+  "owner": {
+    "name": "Niwa",
+    "email": "support@niwa.app"
+  },
+  "plugins": [
+    {
+      "name": "niwa",
+      "source": "./",
+      "description": "Publish the web apps and sites you make with Claude to a private niwa.app address, and look after them."
+    }
+  ]
+}

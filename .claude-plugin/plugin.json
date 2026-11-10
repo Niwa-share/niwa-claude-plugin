@@ -1,0 +1,20 @@
+{
+  "name": "niwa",
+  "displayName": "Niwa",
+  "version": "1.0.0",
+  "description": "Publish the web apps and sites you make with Claude to a private niwa.app address, and look after them: versions, logs and sharing.",
+  "author": {
+    "name": "Niwa",
+    "email": "support@niwa.app",
+    "url": "https://www.niwa.app"
+  },
+  "homepage": "https://www.niwa.app",
+  "repository": "https://github.com/Niwa-share/niwa-claude-plugin",
+  "license": "MIT",
+  "keywords": ["publishing", "hosting", "web apps", "sharing", "designers"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://www.niwa.app/instruct",
+  "supportUrl": "https://www.niwa.app/support",
+  "privacyPolicyUrl": "https://www.niwa.app/privacy",
+  "termsOfServiceUrl": "https://www.niwa.app/terms"
+}
