@@ -20,7 +20,7 @@ There are no hooks, scripts or local programs: nothing in this plugin runs on yo
 
 The plugin talks to one service, Niwa (`dashboard.niwa.app`), as the Niwa account you signed in with. When you ask Claude to publish, the project's files are uploaded to Niwa so it can host them. Claude is told never to upload `.env` files or other secrets. Nothing is sent anywhere else.
 
-See Niwa's [privacy policy](https://www.niwa.app/privacy) and [terms](https://www.niwa.app/terms).
+Niwa is a product of Mooji, Inc. See Niwa's [privacy policy](https://www.niwa.app/privacy) and [terms](https://www.niwa.app/terms).
 
 ## You need a Niwa account
 
@@ -45,4 +45,4 @@ Then open `/mcp` in a session and sign in to `niwa`.
 
 ## License
 
-MIT. See [LICENSE](./LICENSE).
+MIT. Copyright (c) 2026 Mooji, Inc. See [LICENSE](./LICENSE).
