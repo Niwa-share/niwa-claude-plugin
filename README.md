@@ -33,7 +33,7 @@ On claude.ai or in the Claude desktop app, open **Customize > Plugins**, find Ni
 In Claude Code:
 
 ```sh
-claude plugin marketplace add Niwa-share/niwa-claude-plugin
+claude plugin marketplace add Niwa-share/plugin
 claude plugin install niwa@niwa-app
 ```
 

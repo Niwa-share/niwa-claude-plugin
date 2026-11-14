@@ -9,7 +9,7 @@
     "url": "https://www.niwa.app"
   },
   "homepage": "https://www.niwa.app",
-  "repository": "https://github.com/Niwa-share/niwa-claude-plugin",
+  "repository": "https://github.com/Niwa-share/plugin",
   "license": "MIT",
   "keywords": ["publishing", "hosting", "web apps", "sharing", "designers"],
   "icon": "./assets/icon.png",
