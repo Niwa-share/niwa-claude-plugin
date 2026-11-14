@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Publish the web apps you make with AI to a private niwa.app address, and look after them: versions, logs and sharing.",
   "author": {
-    "name": "Liang Zhang",
+    "name": "Mooji, Inc.",
     "email": "support@niwa.app",
     "url": "https://www.niwa.app"
   },
@@ -11,7 +11,7 @@
   "keywords": [
     "publishing",
     "hosting",
-    "web apps",
+    "sharing",
     "designers",
     "mcp"
   ],
