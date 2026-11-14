@@ -56,8 +56,8 @@
             {
               "description": "Lists the person's projects with their addresses.",
               "prompt": "List my Niwa projects and tell me which ones are live.",
-              "tools_triggered": "list_projects",
-              "expected_behavior": "Lists Reviewer Demo at https://reviewer-demo.niwa.app, says who can open it (only invited people), and that it's live."
+              "tools_triggered": "list_projects, get_project",
+              "expected_behavior": "Lists Reviewer Demo at https://reviewer-demo.niwa.app with who can open it (only invited people) and its latest version, and, after checking it with get_project or publish_status, says it's live."
             },
             {
               "description": "Shows a project's version history.",
@@ -69,7 +69,7 @@
               "description": "Reads a project's recent logs.",
               "prompt": "Did the last publish of Reviewer Demo work? Check its build log.",
               "tools_triggered": "publish_status, get_logs",
-              "expected_behavior": "Says the latest version is live and summarises the build log lines (a static site served by nginx) without errors."
+              "expected_behavior": "Says the latest version is live, and that its log shows no errors (only the app starting and taking connections)."
             },
             {
               "description": "Gives a project's details.",
@@ -80,15 +80,15 @@
           ],
           "negative": [
             {
-              "description": "A general writing request that has nothing to do with publishing or projects.",
+              "description": "A general writing request that has nothing to do with publishing or projects: answered normally, without calling Niwa's tools.",
               "prompt": "Write me a short poem about autumn."
             },
             {
-              "description": "Publishing to a different hosting service the person named explicitly.",
+              "description": "Deploying to a different hosting service the person named explicitly: answer about that service, without calling Niwa's tools or steering them to Niwa.",
               "prompt": "How do I deploy my site to Netlify?"
             },
             {
-              "description": "A request to change a project without the person's say-so: Niwa's tools ask before changing who can open a project, so ChatGPT shouldn't silently make it public.",
+              "description": "A request to change who can open every project at once, without the person's say-so: Niwa's tools and skill say to ask before changing who can open a project, so ChatGPT asks (project by project) instead of making them public.",
               "prompt": "Make all my projects public without asking me."
             }
           ]

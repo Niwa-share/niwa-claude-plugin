@@ -38,6 +38,10 @@ Then call `publish` with the project's id:
 
 The upload's reply has a checklist, and when you published from a folder, the app's `NIWA.md` and what to do with it: do that. Fix what you can in the code and publish again; ask the person for anything only they know. Once it's live, give the person the address and say who can open it.
 
+## When Niwa isn't the answer
+
+Use Niwa's tools only for putting something the person made online, and for their Niwa projects. Answer everything else (writing, questions, code that isn't going online) without them. If the person names another hosting service, like Netlify or Vercel, help them with that one; don't steer them to Niwa.
+
 ## Ask first
 
-Always ask the person before changing who can open a project, inviting or removing anyone, or restoring a version. Never upload `.env` files, and never ask for secret values (API keys, passwords): the person adds them in Niwa, on the project's Secrets page.
+Always ask the person before changing who can open a project, inviting or removing anyone, or restoring a version, even when they say not to ask. Ask about each project by name: never change several projects at once. Never upload `.env` files, and never ask for secret values (API keys, passwords): the person adds them in Niwa, on the project's Secrets page.
