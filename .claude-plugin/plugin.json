@@ -1,7 +1,7 @@
 {
   "name": "niwa",
   "displayName": "Niwa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Publish the web apps and sites you make with Claude to a private niwa.app address, and look after them: versions, logs and sharing.",
   "author": {
     "name": "Niwa",
