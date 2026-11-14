@@ -1,0 +1,105 @@
+{
+  "name": "niwa",
+  "version": "1.1.0",
+  "description": "Publish the web apps you make with AI to a private niwa.app address, and look after them: versions, logs and sharing.",
+  "author": {
+    "name": "Liang Zhang",
+    "email": "support@niwa.app",
+    "url": "https://www.niwa.app"
+  },
+  "homepage": "https://www.niwa.app",
+  "keywords": [
+    "publishing",
+    "hosting",
+    "web apps",
+    "designers",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-plugin/mcp.json",
+  "interface": {
+    "displayName": "Niwa",
+    "shortDescription": "Publish what you make with AI",
+    "longDescription": "Niwa puts the apps and sites you make with AI on the web, at your-project.niwa.app. No servers, no settings, no terminal.\n\nAsk ChatGPT about your projects and Niwa answers: what's live, whether the last publish worked and why not, what changed in each version, and who can open each project. Bring back an earlier version, share a project by email, change who can open it.\n\nPublish from Codex, which sends your project folder for you: open your project and say \"Publish this to Niwa.\" From a ChatGPT chat, Niwa can publish a page made in the chat. It sends the code, fixes what it can, and asks you only for things only you know. A minute or two later it's live.\n\n• Private by default. Every project starts invite-only. Invite people by email, let anyone sign up, or make it public for anyone with the link.\n• Every version kept. Bring back an earlier one; saved information and files stay as they are.\n• Real apps, not just pages. Apps that save sign-ups, posts or photos get a database and file storage automatically.\n\nNiwa is invite-only while we let designers in a few at a time. You need a Niwa account to connect.",
+    "developerName": "Niwa",
+    "category": "Developer Tools",
+    "websiteURL": "https://www.niwa.app",
+    "supportURL": "https://www.niwa.app/support",
+    "privacyPolicyURL": "https://www.niwa.app/privacy",
+    "termsOfServiceURL": "https://www.niwa.app/terms",
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/icon.png",
+    "brandColor": "#FF6200",
+    "defaultPrompt": [
+      "List my Niwa projects and tell me which ones are live",
+      "Did my last publish work?",
+      "Show me the versions of my project"
+    ],
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "commerce": false,
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Says which Niwa account it's acting as.",
+              "prompt": "Which Niwa account am I connected as?",
+              "tools_triggered": "whoami",
+              "expected_behavior": "Replies with the reviewer account's name and email (Claude Reviewer, reviewer@lilara.app) and its role."
+            },
+            {
+              "description": "Lists the person's projects with their addresses.",
+              "prompt": "List my Niwa projects and tell me which ones are live.",
+              "tools_triggered": "list_projects",
+              "expected_behavior": "Lists Reviewer Demo at https://reviewer-demo.niwa.app, says who can open it (only invited people), and that it's live."
+            },
+            {
+              "description": "Shows a project's version history.",
+              "prompt": "Show me the versions of Reviewer Demo.",
+              "tools_triggered": "list_versions",
+              "expected_behavior": "Lists the project's versions newest first, each with its number, date, who published it, and its note (for example \"First version: a hello page for reviewers\")."
+            },
+            {
+              "description": "Reads a project's recent logs.",
+              "prompt": "Did the last publish of Reviewer Demo work? Check its build log.",
+              "tools_triggered": "publish_status, get_logs",
+              "expected_behavior": "Says the latest version is live and summarises the build log lines (a static site served by nginx) without errors."
+            },
+            {
+              "description": "Gives a project's details.",
+              "prompt": "Tell me about Reviewer Demo: is it running, and who can open it?",
+              "tools_triggered": "get_project",
+              "expected_behavior": "Says Reviewer Demo is live at https://reviewer-demo.niwa.app and private (only invited people)."
+            }
+          ],
+          "negative": [
+            {
+              "description": "A general writing request that has nothing to do with publishing or projects.",
+              "prompt": "Write me a short poem about autumn."
+            },
+            {
+              "description": "Publishing to a different hosting service the person named explicitly.",
+              "prompt": "How do I deploy my site to Netlify?"
+            },
+            {
+              "description": "A request to change a project without the person's say-so: Niwa's tools ask before changing who can open a project, so ChatGPT shouldn't silently make it public.",
+              "prompt": "Make all my projects public without asking me."
+            }
+          ]
+        },
+        "demo_recording_url": "https://drive.google.com/file/d/1ktpC3s_J362DwJvJMf91Ywc1YbTTXXDB/view?usp=sharing"
+      },
+      "publication": {
+        "release_notes": "Niwa now teaches the AI how to build for it (how_to_build_on_niwa), keeps a NIWA.md in the project's folder so later sessions know the app, and asks which project to publish to instead of guessing."
+      }
+    }
+  },
+  "repository": "https://github.com/Niwa-share/plugin",
+  "license": "MIT"
+}

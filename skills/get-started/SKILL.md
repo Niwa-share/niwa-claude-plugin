@@ -7,7 +7,7 @@ description: Use when someone first connects Niwa, asks what Niwa can do, or wan
 
 Niwa hosts the web apps and sites people make with AI at `<name>.niwa.app`, and lets each project's owner choose who can open it. Every project starts private.
 
-Niwa's tools come from its connector. If they aren't available, tell the person to connect Niwa first (in Claude Code: open `/mcp` and sign in to `niwa`; in Claude chat or Cowork: connect it on this plugin's Connectors tab), then carry on.
+Niwa's tools come from its connector. If they aren't available, tell the person to connect Niwa first, then carry on: in Claude Code, open `/mcp` and sign in to `niwa`; in Claude chat or Cowork, connect it on this plugin's Connectors tab; in Codex or ChatGPT, sign in to Niwa when the plugin asks.
 
 ## When someone connects Niwa for the first time
 
@@ -33,8 +33,8 @@ Publish only when the person has asked for it.
 
 Then call `publish` with the project's id:
 
-- **Where you can run commands in the project's folder** (Claude Code, or Cowork working on the person's computer): `publish` returns a one-time upload link and a command. Run that command from the project's top folder. It waits until the app is live, so you don't need `publish_status` unless it says so.
-- **In a chat without that**: send the files themselves in `publish`'s `files`, for example a complete `index.html` (up to 300 files and 8 MB in total). Then call `publish_status` every 30 to 60 seconds until it says live or failed.
+- **Where you can run commands in the project's folder** (Claude Code, Codex, or Cowork working on the person's computer): `publish` returns a one-time upload link and a command. Run that command from the project's top folder. It waits until the app is live, so you don't need `publish_status` unless it says so.
+- **In a chat without that** (Claude or ChatGPT): send the files themselves in `publish`'s `files`, for example a complete `index.html` (up to 300 files and 8 MB in total). Then call `publish_status` every 30 to 60 seconds until it says live or failed.
 
 The upload's reply has a checklist, and when you published from a folder, the app's `NIWA.md` and what to do with it: do that. Fix what you can in the code and publish again; ask the person for anything only they know. Once it's live, give the person the address and say who can open it.
 
