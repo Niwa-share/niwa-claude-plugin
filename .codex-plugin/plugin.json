@@ -16,12 +16,12 @@
     "mcp"
   ],
   "skills": "./skills/",
-  "mcpServers": "./.codex-plugin/mcp.json",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Niwa",
     "shortDescription": "Publish what you make with AI",
     "longDescription": "Niwa puts the apps and sites you make with AI on the web, at your-project.niwa.app. No servers, no settings, no terminal.\n\nAsk ChatGPT about your projects and Niwa answers: what's live, whether the last publish worked and why not, what changed in each version, and who can open each project. Bring back an earlier version, share a project by email, change who can open it.\n\nPublish from Codex, which sends your project folder for you: open your project and say \"Publish this to Niwa.\" From a ChatGPT chat, Niwa can publish a page made in the chat. It sends the code, fixes what it can, and asks you only for things only you know. A minute or two later it's live.\n\n• Private by default. Every project starts invite-only. Invite people by email, let anyone sign up, or make it public for anyone with the link.\n• Every version kept. Bring back an earlier one; saved information and files stay as they are.\n• Real apps, not just pages. Apps that save sign-ups, posts or photos get a database and file storage automatically.\n\nNiwa is invite-only while we let designers in a few at a time. You need a Niwa account to connect.",
-    "developerName": "Niwa",
+    "developerName": "Mooji, Inc.",
     "category": "Developer Tools",
     "websiteURL": "https://www.niwa.app",
     "supportURL": "https://www.niwa.app/support",
@@ -31,7 +31,7 @@
     "composerIcon": "./assets/icon.png",
     "brandColor": "#FF6200",
     "defaultPrompt": [
-      "List my Niwa projects and tell me which ones are live",
+      "List my Niwa projects and who can open each",
       "Did my last publish work?",
       "Show me the versions of my project"
     ],
@@ -57,7 +57,7 @@
               "description": "Lists the person's projects with their addresses.",
               "prompt": "List my Niwa projects and tell me which ones are live.",
               "tools_triggered": "list_projects, get_project",
-              "expected_behavior": "Lists Reviewer Demo at https://reviewer-demo.niwa.app with who can open it (only invited people) and its latest version, and, after checking it with get_project or publish_status, says it's live."
+              "expected_behavior": "Lists Reviewer Demo at https://reviewer-demo.niwa.app with who can open it (only invited people) and its latest version, and, after checking it with get_project, says it's live."
             },
             {
               "description": "Shows a project's version history.",

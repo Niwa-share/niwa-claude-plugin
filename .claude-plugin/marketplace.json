@@ -2,7 +2,7 @@
   "name": "niwa-app",
   "description": "Niwa's plugin for Claude: publish what you make with AI",
   "owner": {
-    "name": "Niwa",
+    "name": "Mooji, Inc.",
     "email": "support@niwa.app"
   },
   "plugins": [

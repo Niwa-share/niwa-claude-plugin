@@ -14,7 +14,9 @@ Niwa puts the apps and sites you make with AI on the web, at `your-project.niwa.
 - A connector to Niwa's MCP server at `https://dashboard.niwa.app/mcp`. You sign in to Niwa once (OAuth) to allow it. There is no API key to paste.
 - One skill, `get-started`, that tells Claude or Codex how to greet you, show your projects, and publish.
 
-There are no hooks, scripts or local programs: nothing in this plugin runs on your computer.
+The plugin itself has no hooks, scripts or local programs. When you publish a project folder (in Claude Code, Codex or Cowork), your AI tool runs one command that Niwa gives it: `npx` downloads Niwa's small publishing helper from `dashboard.niwa.app`, which packs the folder, uploads it and follows the build until it's live. Where Node isn't there, it uses `tar` and `curl` instead.
+
+Publishing from a folder also writes a `NIWA.md` file in your project, and adds a line pointing to it in its `AGENTS.md` or `CLAUDE.md` (making an `AGENTS.md` if there's neither). It tells later sessions, in any AI tool, which Niwa project this is and how the app is built. Niwa rewrites it at each publish.
 
 ## What it sends, and where
 
@@ -43,9 +45,10 @@ In Codex:
 
 ```sh
 codex plugin marketplace add Niwa-share/plugin
+codex plugin install niwa@niwa-app
 ```
 
-Then install Niwa from the plugin directory, and sign in to Niwa when it asks.
+Sign in to Niwa when it asks.
 
 ## Help
 

@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "niwa": {
-      "type": "streamable-http",
-      "url": "https://dashboard.niwa.app/mcp"
-    }
-  }
-}
